@@ -1,0 +1,108 @@
+:root {
+  --neutral-very-dark-blue: hsl(226, 43%, 10%);
+  --neutral-dark-blue: hsl(235, 46%, 20%);
+  --neutral-desaturated-blue: hsl(235, 45%, 61%);
+  --neutral-pale-blue: hsl(236, 100%, 87%);
+
+  --primary-blue: hsl(246, 80%, 60%);
+  --primary-work: hsl(15, 100%, 70%);
+  --primary-study: hsl(348, 100%, 68%);
+  --primary-play: hsl(195, 74%, 62%);
+  --primary-excercise: hsl(145, 58%, 55%);
+  --primary-self-care: hsl(43, 84%, 65%);
+}
+ul,
+ol,
+li {
+  list-style-type: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+ol,
+ul,
+p,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+}
+
+h2 {
+  font-size: 2.25rem;
+  font-weight: 300;
+}
+h4 {
+  font-weight: 400;
+}
+p {
+  font-size: 0.75rem;
+  color: var(--neutral-pale-blue);
+}
+.list-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(300px, 1fr));
+  grid-template-rows: auto;
+}
+.card-container {
+  width: 300px;
+  /* for now */
+}
+.card-icon {
+  position: absolute;
+  top: 0;
+  left: 210px;
+  bottom: 0;
+  right: 0;
+}
+.card-header {
+  position: relative;
+  background-color: var(--primary-work);
+  translate: 0px 16px;
+  padding: 2rem;
+  border-radius: 12px 12px 0 0;
+}
+.card-content {
+  background-color: var(--neutral-dark-blue);
+  padding: 1rem;
+  position: relative;
+  z-index: 1;
+  border-radius: 12px;
+}
+.card-action {
+  background-image: url("../../assets/images/icon-ellipsis.svg");
+}
+.card-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 1.25rem;
+}
+
+h2 {
+  margin-bottom: 0.75rem;
+}
+
+@media screen and (max-width: 599px) {
+  .list-grid-layout {
+    display: flex;
+    flex-direction: column;
+  }
+  .card-header {
+    padding: 1.75rem;
+  }
+  .card-description {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
