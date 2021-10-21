@@ -10,6 +10,7 @@
   --primary-play: hsl(195, 74%, 62%);
   --primary-excercise: hsl(145, 58%, 55%);
   --primary-self-care: hsl(43, 84%, 65%);
+  --primary-social: #5746ea;
 }
 ul,
 ol,
@@ -34,25 +35,69 @@ body {
   font-family: "Rubik", sans-serif;
   font-size: 18px;
 }
-
+body {
+  background-color: var(--neutral-very-dark-blue);
+}
 h2 {
   font-size: 2.25rem;
   font-weight: 300;
+  margin-bottom: 0.75rem;
 }
 h4 {
   font-weight: 400;
+}
+label {
+  color: var(--neutral-pale-blue);
 }
 p {
   font-size: 0.75rem;
   color: var(--neutral-pale-blue);
 }
+.container {
+  height: 100%;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1300px;
+  padding: 13rem 1rem;
+}
+.layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: auto;
+  width: 100%;
+}
+.profile {
+}
+.profile-header {
+  background-color: var(--primary-social);
+  display: flex;
+  padding: 2rem 2rem 1rem;
+  translate: 0 8px;
+  border-radius: 12px;
+}
+.profile-nav {
+  background-color: var(--neutral-dark-blue);
+  display: flex;
+  padding: 1.5rem;
+  border-radius: 0 0 12px 12px;
+}
+.profile-image__container {
+  width: 69px;
+}
+.profile-image {
+  width: 100%;
+
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
 .list-grid-layout {
   display: grid;
   grid-template-columns: repeat(4, minmax(300px, 1fr));
   grid-template-rows: auto;
 }
 .card-container {
-  width: 300px;
+  /* width: 300px; */
   /* for now */
 }
 .card-icon {
@@ -87,17 +132,41 @@ p {
   margin-bottom: 1.25rem;
 }
 
-h2 {
-  margin-bottom: 0.75rem;
-}
-
 @media screen and (max-width: 599px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+  .container {
+    padding: 1rem;
+    width: unset;
+  }
+  .profile-image__container {
+    margin-right: 1.5rem;
+  }
+  .layout {
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .profile-header {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .profile-nav {
+    flex-direction: row;
+    justify-content: space-around;
+  }
   .list-grid-layout {
     display: flex;
     flex-direction: column;
   }
   .card-header {
-    padding: 1.75rem;
+    padding: 1.85rem;
+  }
+  .card-icon {
+    left: 326px;
   }
   .card-description {
     display: flex;

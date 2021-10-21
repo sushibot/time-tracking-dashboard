@@ -19,121 +19,60 @@
     <title>Frontend Mentor | Time tracking dashboard</title>
   </head>
   <body>
-    <main>
-      <aside>
-        <div>
-          <img
-            style="
-              height: 69px;
-              width: 69px;
-              border: 8px solid red;
-              border-radius: 50%;
-            "
-          />
-        </div>
-        <label>Report for</label>
-        <h2>Jeremy Robson</h2>
-      </aside>
-      <section>
-        <ul class="list-grid-layout">
-          <li class="card-container">
-            <div class="card-header">
+    <main class="container">
+      <div class="layout">
+        <aside class="profile">
+          <div class="profile-header">
+            <div class="profile-image__container">
               <img
-                class="card-icon"
-                src="../../assets/images/icon-work.svg"
-                alt=""
+                class="profile-image"
+                src="../../assets/images/image-jeremy.png"
               />
             </div>
-            <div class="card-content">
-              <div class="card-title">
-                <h4>Work</h4>
-                <img src="../../assets/images/icon-ellipsis.svg" alt="" />
-              </div>
-              <div class="card-description">
-                <h2>32hrs</h2>
-                <p>Last Week - 36hrs</p>
-              </div>
+            <div>
+              <p>Report for</p>
+              <h2>Jeremy Robson</h2>
             </div>
-          </li>
-        </ul>
-      </section>
+          </div>
+          <nav>
+            <ol class="profile-nav">
+              <li>
+                <label>Daily</label>
+              </li>
+              <li>
+                <label>Weekly</label>
+              </li>
+              <li>
+                <label>Monthly</label>
+              </li>
+            </ol>
+          </nav>
+        </aside>
+        <section class="cards">
+          <ul class="list-grid-layout">
+            <li class="card-container">
+              <div class="card-header">
+                <img
+                  class="card-icon"
+                  src="../../assets/images/icon-work.svg"
+                  alt=""
+                />
+              </div>
+              <div class="card-content">
+                <div class="card-title">
+                  <h4 id="title">Work</h4>
+                  <img src="../../assets/images/icon-ellipsis.svg" alt="" />
+                </div>
+                <div class="card-description">
+                  <h2 id="timeframe_current">32hrs</h2>
+                  <p id="timeframe_previous">Last Week - 36hrs</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
     </main>
-    Report for Jeremy Robson Daily Weekly Monthly Work 5hrs
-    <!-- daily -->
-    Previous - 7hrs
-    <!-- daily -->
-    32hrs
-    <!-- weekly -->
-    Previous - 36hrs
-    <!-- weekly -->
-    103hrs
-    <!-- monthly -->
-    Previous - 128hrs
-    <!-- monthly -->
-
-    Play 1hr
-    <!-- daily -->
-    Previous - 2hrs
-    <!-- daily -->
-    10hrs
-    <!-- weekly -->
-    Previous - 8hrs
-    <!-- weekly -->
-    23hrs
-    <!-- monthly -->
-    Previous - 29hrs
-    <!-- monthly -->
-
-    Study 0hrs
-    <!-- daily -->
-    Previous - 1hr
-    <!-- daily -->
-    4hrs
-    <!-- weekly -->
-    Previous - 7hrs
-    <!-- weekly -->
-    13hrs
-    <!-- monthly -->
-    Previous - 19hrs
-    <!-- monthly -->
-
-    Exercise 1hr
-    <!-- daily -->
-    Previous - 1hr
-    <!-- daily -->
-    4hrs
-    <!-- weekly -->
-    Previous - 5hrs
-    <!-- weekly -->
-    11hrs
-    <!-- monthly -->
-    Previous - 18hrs
-    <!-- monthly -->
-
-    Social 1hr
-    <!-- daily -->
-    Previous - 3hrs
-    <!-- daily -->
-    5hrs
-    <!-- weekly -->
-    Previous - 10hrs
-    <!-- weekly -->
-    21hrs
-    <!-- monthly -->
-    Previous - 23hrs
-    <!-- monthly -->
-
-    Self Care 0hrs
-    <!-- daily -->
-    Previous - 1hr
-    <!-- daily -->
-    2hrs
-    <!-- weekly -->
-    Previous - 2hrs
-    <!-- weekly -->
-    7hrs
-    <!-- monthly -->
-    Previous - 11hrs
-    <!-- monthly -->
   </body>
+  <script src="../script/index.js"></script>
 </html>
