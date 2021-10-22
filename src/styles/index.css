@@ -8,7 +8,7 @@
   --primary-work: hsl(15, 100%, 70%);
   --primary-study: hsl(348, 100%, 68%);
   --primary-play: hsl(195, 74%, 62%);
-  --primary-excercise: hsl(145, 58%, 55%);
+  --primary-exercise: hsl(145, 58%, 55%);
   --primary-self-care: hsl(43, 84%, 65%);
   --primary-social: #5746ea;
 }
@@ -96,10 +96,7 @@ p {
   grid-template-columns: repeat(4, minmax(300px, 1fr));
   grid-template-rows: auto;
 }
-.card-container {
-  /* width: 300px; */
-  /* for now */
-}
+
 .card-icon {
   position: absolute;
   top: 0;
@@ -109,7 +106,6 @@ p {
 }
 .card-header {
   position: relative;
-  background-color: var(--primary-work);
   translate: 0px 16px;
   padding: 2rem;
   border-radius: 12px 12px 0 0;
@@ -166,7 +162,7 @@ p {
     padding: 1.85rem;
   }
   .card-icon {
-    left: 326px;
+    left: 320px;
   }
   .card-description {
     display: flex;
