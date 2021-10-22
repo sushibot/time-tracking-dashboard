@@ -62,11 +62,12 @@ p {
   color: white;
 }
 .container {
-  height: 100%;
+  min-height: 100vh;
   margin: 0 auto;
   width: 100%;
-  max-width: 1300px;
-  padding: 13rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .layout {
   display: grid;
@@ -155,9 +156,26 @@ p {
   flex-direction: row;
   margin-bottom: 1.25rem;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1440px) {
   .container {
     width: unset;
+    padding: 2rem;
+    margin: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .layout {
+    width: unset;
+    margin: unset;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    display: block;
+    width: unset;
+    padding: 2rem;
   }
   .profile {
     margin-right: unset;
