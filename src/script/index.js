@@ -6,6 +6,7 @@ const json_contents = () => {
   const response = JSON.parse(get_file.responseText);
   return response;
 };
+
 const timeframe_title = ({ text }) => {
   const new_title = document.createElement("h4");
   new_title.innerText = text;
@@ -49,6 +50,7 @@ const card_title = ({ title }) => {
   div.append(timeframe_title({ text: title }), img);
   return div;
 };
+
 const card_content = ({ title, current, previous }) => {
   const div = document.createElement("div");
   div.classList.add("card-content");
@@ -69,7 +71,7 @@ const card_header = ({ color, icon }) => {
   return div;
 };
 
-const remap_contents = () => {
+const render_contents = () => {
   const contents = json_contents();
   const cards_list = document.querySelector("#cards-list");
   contents.map((content) => {
@@ -92,4 +94,5 @@ const remap_contents = () => {
     cards_list.appendChild(li);
   });
 };
-remap_contents();
+
+render_contents();
