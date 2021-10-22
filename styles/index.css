@@ -51,12 +51,15 @@ h3 {
 h4 {
   font-weight: 400;
 }
-label {
+li {
   color: var(--neutral-pale-blue);
 }
 p {
   font-size: 0.75rem;
   color: var(--neutral-pale-blue);
+}
+.active {
+  color: white;
 }
 .container {
   height: 100%;
@@ -97,6 +100,9 @@ p {
 }
 .nav-item:not(:last-child) {
   margin-bottom: 1rem;
+}
+.nav-item:hover {
+  cursor: pointer;
 }
 
 .profile-image__container {

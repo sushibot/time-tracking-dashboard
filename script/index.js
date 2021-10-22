@@ -71,14 +71,16 @@ const card_header = ({ color, icon }) => {
   return div;
 };
 
-const render_contents = () => {
+const render_contents = (timeframe = "daily") => {
   const contents = json_contents();
   const cards_list = document.querySelector("#cards-list");
+  console.log(document.querySelector(".active"));
+  cards_list.textContent = "";
   contents.map((content) => {
     const li = document.createElement("li");
     li.classList.add("card-container");
-    const previous = content.timeframes.daily.previous;
-    const current = content.timeframes.daily.current;
+    const previous = content.timeframes[timeframe].previous;
+    const current = content.timeframes[timeframe].current;
     const title =
       content.title.toLowerCase() == "self care"
         ? "self-care"
@@ -96,3 +98,17 @@ const render_contents = () => {
 };
 
 render_contents();
+const list_parent = document.querySelector("#list-nav");
+const list_items = list_parent.children;
+for (let li of list_items) {
+  li.addEventListener("click", (event) => {
+    // const is_active = event.target.classList.contains("active");
+    // if (is_active) {
+    //   event.target.classList.remove("active");
+    // } else {
+    //   event.target.classList.add("active");
+    // }
+    const action = event.target.textContent.toLowerCase();
+    render_contents(action);
+  });
+}
