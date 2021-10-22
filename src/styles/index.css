@@ -173,6 +173,9 @@ p {
   h2 {
     font-size: 1.5rem;
   }
+  h3 {
+    font-size: 1.25rem;
+  }
   .container {
     padding: 1rem;
     width: unset;
@@ -186,12 +189,21 @@ p {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
+  .profile-name {
+    margin-bottom: unset;
+  }
+  .profile-image__container {
+    margin-bottom: unset;
+  }
   .profile-header {
     flex-direction: row;
     align-items: center;
   }
-
+  .nav-item:not(:last-child) {
+    margin-bottom: unset;
+  }
   .profile-nav {
+    align-items: center;
     flex-direction: row;
     justify-content: space-around;
   }
