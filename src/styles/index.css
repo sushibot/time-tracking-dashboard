@@ -163,6 +163,9 @@ p {
     grid-template-rows: auto;
     gap: 1rem;
   }
+  .card-icon {
+    left: 70%;
+  }
   .layout {
     display: flex;
     flex-direction: column;
@@ -215,7 +218,7 @@ p {
     padding: 1.85rem;
   }
   .card-icon {
-    left: 320px;
+    left: 75%;
   }
   .card-description {
     display: flex;
