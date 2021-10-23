@@ -66,6 +66,7 @@ const card_header = ({ color, icon }) => {
   div.style.backgroundColor = color;
   const img = document.createElement("img");
   img.src = `../../assets/images/icon-${icon}.svg`;
+  img.alt = `icon-${icon}.svg`;
   img.classList.add("card-icon");
   div.append(img);
   return div;
@@ -74,7 +75,6 @@ const card_header = ({ color, icon }) => {
 const render_contents = (timeframe = "daily") => {
   const contents = json_contents();
   const cards_list = document.querySelector("#cards-list");
-  console.log(document.querySelector(".active"));
   cards_list.textContent = "";
   contents.map((content) => {
     const li = document.createElement("li");
@@ -98,6 +98,7 @@ const render_contents = (timeframe = "daily") => {
 };
 
 render_contents();
+
 const list_parent = document.querySelector("#list-nav");
 const list_items = list_parent.children;
 
