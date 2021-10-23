@@ -100,15 +100,16 @@ const render_contents = (timeframe = "daily") => {
 render_contents();
 const list_parent = document.querySelector("#list-nav");
 const list_items = list_parent.children;
-for (let li of list_items) {
-  li.addEventListener("click", (event) => {
-    // const is_active = event.target.classList.contains("active");
-    // if (is_active) {
-    //   event.target.classList.remove("active");
-    // } else {
-    //   event.target.classList.add("active");
-    // }
-    const action = event.target.textContent.toLowerCase();
-    render_contents(action);
-  });
-}
+
+list_parent.addEventListener("click", (event) => {
+  const target = event.target;
+  if (target.tagName !== "LI") return;
+  for (let li of list_items) {
+    if (li.classList.contains("active")) {
+      li.classList.remove("active");
+    }
+  }
+  target.classList.add("active");
+  const action = event.target.textContent.toLowerCase();
+  render_contents(action);
+});
